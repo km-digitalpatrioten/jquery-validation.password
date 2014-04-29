@@ -92,6 +92,7 @@
             .addClass("password-meter-message-" + rating.messageKey)
             .text($.validator.passwordRating.messages[rating.messageKey]);
         // display process bar instead of error message
+	$(document).trigger('updateshadowdom');
 
         return rating.rate > 2;
     }, "&nbsp;");
